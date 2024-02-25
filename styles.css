@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'TitleFont'; /* Name your font */
+    src: url('/beon/Beon-Regular.ttf'); /* URL to your font file */
+  }
+  
+
+/*reset page spacing*/
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  /*style navbar*/
+  nav {
+    text-align: center;
+    font-size: 16pt;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    background-color: #EC6E44;
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #FFE5B6;
+    padding: 14px;
+    font-family: 'Verdana';
+  }
+  
+  li a:hover {
+    color: #EC6E44;
+    background-color: #f8f9d7;
+  }
+  
+  body {
+   background: linear-gradient(to bottom, #1d1210, #000);
+   background-attachment: fixed;
+  }
+  
+  h1 {
+    color: #fff;
+    font-size: 65pt;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'TitleFont';
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #EC6E44,
+    0 0 25px #EC6E44;
+  }
+ 
+  p {
+    font-size: 12pt;
+    font-family: 'Verdana';
+    color: #E9AA4C;
+  }
