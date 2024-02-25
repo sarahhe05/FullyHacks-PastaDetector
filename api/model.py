@@ -15,7 +15,7 @@ def preprocess_img(img_path):
     img_reshape = img2arr.reshape(1, 224, 224, 3)
     return img_reshape
 # Load the labels
-class_names = open("D:/Code/FullyHacks/converted_keras/labels.txt", "r").readlines()
+class_names = open("converted_keras/labels.txt", "r").readlines()
 # Predicting function
 def predict_result(predict):
     pred = model.predict(predict)
