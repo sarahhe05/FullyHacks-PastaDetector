@@ -16,10 +16,22 @@
   
   h1 {
     color: #FFF3E7;
-    font-size: 65pt;
+    font-size: 60pt;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    font-family: 'TitleFont';
+    text-shadow:
+    0 0 5px #FFF3E7,
+    0 0 10px #FFF3E7,
+    0 0 20px #EC6E44,
+    0 0 25px #EC6E44;
+  }
+
+  h2 {
+    color: #FFF3E7;
+    font-size: 30pt;
+    text-align: center;
     font-family: 'TitleFont';
     text-shadow:
     0 0 5px #FFF3E7,
@@ -32,7 +44,7 @@
     font-size: 12pt;
     text-align: center;
     font-family: 'Verdana';
-    color: #EC6E44;
+    color: #1d1210;
   }
 
   #title {
@@ -44,13 +56,13 @@
   }
 
   .Click-to-Upload-button {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     height: auto;
     background-color:#E9AA4C;
     margin-top: 20px; 
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     padding: 10px;
     border-radius: 8px;
     border: none;
@@ -67,4 +79,25 @@
   
   .Click-to-Upload-button:hover .button-text{
     color: #EC6E44;
+  }
+
+  #result-section{
+    padding-top:50px;
+    padding-bottom:35px;
+  }
+
+  .uploaded-image{
+    border: 5px;
+    width: 150px;
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+  }
+  
+  .outer-container{
+    background-color: rgba(233,170,76,0.5);
+    border: 5px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
   }

@@ -31,3 +31,16 @@ function showFileName( event ) {
   var fileName = input.files[0].name;
   infoArea.textContent = 'File name: ' + fileName;
 }
+
+function toggleLayout() {
+    var result = document.getElementById('result-section');
+    var displaySetting = result.style.display;
+    if (displaySetting == 'block') {
+      // clock is visible. hide it
+      result.style.display = 'none';
+    }
+    else {
+      // clock is hidden. show it
+      result.style.display = 'block';
+    }
+  }

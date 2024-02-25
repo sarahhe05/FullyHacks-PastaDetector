@@ -24,11 +24,11 @@ def predict_image_file():
             pred = predict_result(img)
             answer = pred[0].strip()
             conf = 'Confidence = ' + str(round(pred[1] * 100, 2)) + '%'
-            return render_template("result.html", predictions= answer, confidence = conf)
+            return render_template("index.html", predictions= answer, confidence = conf)
  
     except:
         error = "File cannot be processed."
-        return render_template("result.html", err=error)
+        return render_template("index.html", err=error)
 
 
 @app.route('/<path:path>')

@@ -10,43 +10,54 @@
 
 <body>
 
-<div class="container py-5">
+    <section class="default-section">
+        <div class="outer-container">
+            <h1 id="title"> PASTA DETECTOR </h1>
+            <p> *placeholder text* Don't know what noodle this is? Upload your photo and we will see. </p>
+            
+            <!--From layout-->
+            <div class="row py-4">
+                <div class="col-lg-6 mx-auto">
 
-  <section id="default">
-      <div class="wrapper">
-          <div class="container">
-          <h1 id="title"> PASTA DETECTOR </h1>
-          <p> *placeholder text* Don't know what noodle this is? Upload your photo and we will see. </p>
-          </div>
-      </div>
-  </section>
-    <!--From layout-->
-        <div class="row py-4">
-            <div class="col-lg-6 mx-auto">
+                <!-- Upload image input-->
+                <form action="{{ url_for('predict_image_file') }}" enctype="multipart/form-data" method="POST">
+                    <input class="hide-upload" id="upload" name="file" type="file">
+                    <label class="Click-to-Upload-button" for="upload"><p class="button-text">Choose file</p></label>
+        
+                    <!-- Uploaded image area-->
+                    <div class="image-area mt-4">
+                    <img alt="" class="uploaded-image" id="imageResult" name="imageResult" src="#"></div>
 
-            <!-- Upload image input-->
-            <form action="{{ url_for('predict_image_file') }}" enctype="multipart/form-data" method="POST">
-                <input class="hide-upload" id="upload" name="file" type="file">
-                <label class="Click-to-Upload-button" for="upload"><p class="button-text">Choose file</p></label>
-    
-                <!-- Uploaded image area-->
-                <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.</p>
-                <div class="image-area mt-4"><img alt="" 
-                    class="img-fluid rounded shadow-sm mx-auto d-block" id="imageResult" name="imageResult" src="#"></div>
-
-                <!-- Submit button-->
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <input class="Click-to-Upload-button" type="submit"/>
+                    <!-- Submit button-->
+                    <div class="container">
+                        <div class="row">
+                                <input class="Click-to-Upload-button" type="submit"/>
                         </div>
                     </div>
-                </div>
-            
-            </form>
-
+                </form>
             </div>
+       
+
+        <!--From layout-->
+        <div class="container py-5">
+
+            <header class="text-white text-center">
+            </header>
+        
+            <header class="text-dark text-center">
+                <div class="image-area mt-4"><img alt="" 
+                    class="uploaded-image" id="imageResult" name="imageResult" src="#"></div>
+                <h2>Prediction:</h2>
+                {% if predictions %}
+                <h1>{{predictions}}</h1>
+                <p>{{confidence}}</p>
+                {% else %}
+                <p>{{err}}</p>
+                {% endif %}
+            </header>
         </div>
+        </div>
+    </section>
 
 </div>
 
