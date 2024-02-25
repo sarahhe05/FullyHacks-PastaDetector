@@ -113,11 +113,11 @@
   }
 
   .uploaded-image{
-    border: 5px;
     width: 150px;
     display: flex; /* Use flexbox to center the image */
     justify-content: center; /* Horizontally center the image */
     align-items: center; /* Vertically center the image */
+    left:40%;
   }
   
   .outer-container{
@@ -125,8 +125,20 @@
     border: 10px solid #FFF3E7;
     width: 800px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 65px;
     border-radius: 10px; /* Optional: Add rounded corners to the container */
     box-shadow: 0 0 20px 10px rgba(233,170,76,0.5); /* Apply glow effect */
     padding-bottom: 50px;
   }
+
+  .image-area{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-area uploaded-image {
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    max-height: 100%; /* Ensure the image does not exceed the container's height */
+}
