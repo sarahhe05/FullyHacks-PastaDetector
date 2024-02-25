@@ -39,6 +39,18 @@
     0 0 20px #EC6E44,
     0 0 25px #EC6E44;
   }
+
+  h3 {
+    color: #FFF3E7;
+    font-size: 20pt;
+    text-align: center;
+    font-family: 'TitleFont';
+    text-shadow:
+    0 0 5px #FFF3E7,
+    0 0 10px #FFF3E7,
+    0 0 20px #EC6E44,
+    0 0 25px #EC6E44;
+  }
  
   p {
     font-size: 12pt;
@@ -58,8 +70,8 @@
   .Click-to-Upload-button {
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
     height: auto;
+    transform: translateX(-50%);
     background-color:#E9AA4C;
     margin-top: 20px; 
     margin-bottom: 150px;
@@ -96,8 +108,11 @@
   
   .outer-container{
     background-color: rgba(233,170,76,0.5);
-    border: 5px;
+    border: 10px solid #FFF3E7;
     width: 800px;
     margin: 0 auto;
     margin-top: 50px;
+    border-radius: 10px; /* Optional: Add rounded corners to the container */
+    box-shadow: 0 0 20px 10px rgba(233,170,76,0.5); /* Apply glow effect */
+    padding-bottom: 50px;
   }
