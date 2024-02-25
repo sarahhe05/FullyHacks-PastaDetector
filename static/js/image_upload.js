@@ -31,12 +31,3 @@ function showFileName( event ) {
   var fileName = input.files[0].name;
   infoArea.textContent = 'File name: ' + fileName;
 }
-
-// Get the rerun button element
-const rerunButton = document.getElementById('rerunButton');
-
-// Add click event listener to the rerun button
-rerunButton.addEventListener('click', function() {
-  // Reload the current page to rerun the HTML from the start
-  location.reload();
-});
