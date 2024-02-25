@@ -43,26 +43,58 @@
   }
   
   body {
-   background: linear-gradient(to bottom, #1d1210, #000);
-   background-attachment: fixed;
+    linear-gradient(to bottom, #1d1210, #000);
+    background-attachment: fixed;
+    background: url(/restaurant-2.jpg);
+    background-size: cover;
   }
   
   h1 {
-    color: #fff;
+    color: #FFF3E7;
     font-size: 65pt;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: 'TitleFont';
     text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
+    0 0 5px #FFF3E7,
+    0 0 10px #FFF3E7,
     0 0 20px #EC6E44,
     0 0 25px #EC6E44;
   }
  
   p {
     font-size: 12pt;
+    text-align: center;
     font-family: 'Verdana';
-    color: #E9AA4C;
+    color: #EC6E44;
+  }
+
+  #title {
+    padding-top: 10%;
+  }
+
+  .Click-to-Upload-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    background-color:#E9AA4C;
+    margin-top: 20px; 
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .button-text {
+    color: #1d1210;
+  }
+
+  .Click-to-Upload-button:hover {
+    background-color:#FFF3E7;
+    box-shadow: 0 0 20px #EC6E44;
+  }
+  
+  .Click-to-Upload-button:hover .button-text{
+    color: #EC6E44;
   }
