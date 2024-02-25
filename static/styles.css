@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TitleFont'; /* Name your font */
-    src: url('/beon/Beon-Regular.ttf'); /* URL to your font file */
+    src: url('/static/beon/Beon-Regular.ttf'); /* URL to your font file */
   }
   
 /*reset page spacing*/
@@ -10,7 +10,7 @@
   }
   
   body {
-    background: url(/images/restaurant.jpg);
+    background: url(/static/images/restaurant.jpg);
     background-size: cover;
   }
   
@@ -39,6 +39,10 @@
     padding-top: 10%;
   }
 
+  .hide-upload{
+    opacity: 0;
+  }
+
   .Click-to-Upload-button {
     position: absolute;
     left: 50%;
@@ -46,6 +50,7 @@
     height: auto;
     background-color:#E9AA4C;
     margin-top: 20px; 
+    margin-bottom: 50px;
     padding: 10px;
     border-radius: 8px;
     border: none;
