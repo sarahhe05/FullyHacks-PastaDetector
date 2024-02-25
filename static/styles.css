@@ -38,6 +38,7 @@
     0 0 10px #FFF3E7,
     0 0 20px #EC6E44,
     0 0 25px #EC6E44;
+    margin-top: 100px;
   }
 
   h3 {
@@ -68,12 +69,25 @@
   }
 
   .Click-to-Upload-button {
-    position: relative;
+    position: absolute;
     left: 50%;
     height: auto;
     transform: translateX(-50%);
     background-color:#E9AA4C;
     margin-top: 20px; 
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .Submit-button {
+    position: absolute;
+    left: 50%;
+    height: auto;
+    transform: translateX(-50%);
+    background-color:#E9AA4C;
+    margin-top: 50px; 
     margin-bottom: 150px;
     padding: 10px;
     border-radius: 8px;

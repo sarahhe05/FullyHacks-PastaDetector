@@ -13,7 +13,7 @@
     <section class="default-section">
         <div class="outer-container">
             <h1 id="title"> PASTA DETECTOR </h1>
-            <p> *placeholder text* Don't know what noodle this is? Upload your photo and we will see. </p>
+            <p> Don't know what pasta this is? Upload your photo and we will see. </p>
             
             <!--From layout-->
             <div class="row py-4">
@@ -21,9 +21,12 @@
 
                 <!-- Upload image input-->
                 <form action="{{ url_for('predict_image_file') }}" enctype="multipart/form-data" method="POST">
-                    <input class="hide-upload" id="upload" name="file" type="file">
-                    <label class="Click-to-Upload-button" for="upload"><p class="button-text">Choose file</p></label>
-        
+                    <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                        <input class="hide-upload" id="upload" name="file" type="file">
+                        <label class="Click-to-Upload-button" for="upload"><p class="button-text">Choose file</p></label>
+                    </div>
+                    
+
                     <!-- Uploaded image area-->
                     <div class="image-area mt-4">
                     <img alt="" class="uploaded-image" id="imageResult" name="imageResult" src="#"></div>
@@ -31,7 +34,7 @@
                     <!-- Submit button-->
                     <div class="container">
                         <div class="row">
-                                <input class="Click-to-Upload-button" type="submit"/>
+                                <input class="Submit-button" type="submit"/>
                         </div>
                     </div>
                 </form>

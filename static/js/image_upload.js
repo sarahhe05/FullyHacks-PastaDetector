@@ -32,15 +32,11 @@ function showFileName( event ) {
   infoArea.textContent = 'File name: ' + fileName;
 }
 
-function toggleLayout() {
-    var result = document.getElementById('result-section');
-    var displaySetting = result.style.display;
-    if (displaySetting == 'block') {
-      // clock is visible. hide it
-      result.style.display = 'none';
-    }
-    else {
-      // clock is hidden. show it
-      result.style.display = 'block';
-    }
-  }
+// Get the rerun button element
+const rerunButton = document.getElementById('rerunButton');
+
+// Add click event listener to the rerun button
+rerunButton.addEventListener('click', function() {
+  // Reload the current page to rerun the HTML from the start
+  location.reload();
+});
