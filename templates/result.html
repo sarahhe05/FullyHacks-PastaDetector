@@ -3,14 +3,20 @@
 <div class="container py-5">
 
     <header class="text-white text-center">
+<<<<<<< Updated upstream
         <h1 class="display-4">Pasta</h1>
         <p class="lead mb-5">You will see the prediction of the input image.</p>
+=======
+        <h1 class="display-4 text-dark">Pasta Detector</h1>
+        <p class="lead mb-5 text-dark">You will see the prediction of the input image.</p>
+>>>>>>> Stashed changes
     </header>
 
-    <header class="text-white text-center">
-        <h1 class="display-5">Prediction</h1>
+    <header class="text-dark text-center">
+        <h1 class="display-5 text dark">Prediction:</h1>
         {% if predictions %}
         <h2 class="display-4 text-dark font-weight-bold">{{predictions}}</h2>
+        <h2 class="display-4 text-dark font-weight-bold">{{confidence}}</h2>
         {% else %}
         <h2 class="display-4 text-dark font-weight-bold">{{err}}</h2>
         {% endif %}

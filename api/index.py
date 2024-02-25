@@ -22,7 +22,9 @@ def predict_image_file():
         if request.method == 'POST':
             img = preprocess_img(request.files['file'].stream)
             pred = predict_result(img)
-            return render_template("result.html", predictions=str(pred))
+            answer = pred[0].strip()
+            conf = 'Confidence = ' + str(round(pred[1] * 100, 2)) + '%'
+            return render_template("result.html", predictions= answer, confidence = conf)
  
     except:
         error = "File cannot be processed."

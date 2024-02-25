@@ -5,7 +5,11 @@ import numpy as np
 
 #Model Code
 
+<<<<<<< Updated upstream
 model = load_model('D:/Code/FullyHacks/converted_keras/keras_model.h5')
+=======
+model = load_model('converted_keras/keras_model.h5')
+>>>>>>> Stashed changes
 
 # Preparing and pre-processing the image
 def preprocess_img(img_path):
