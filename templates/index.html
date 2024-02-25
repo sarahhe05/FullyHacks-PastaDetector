@@ -1,42 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="/styles.css"
-    />
-    <title>Pasta Detector</title>
-  </head>
-  <body>
-    <main class="container">
-      <nav>
-        <ul>
-          <li>
-            <a href="https://fullyhacks.acmcsuf.com/" target="_blank"
-              ><strong>FullyHacks</strong></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/acmcsufoss/hackpack_flask_vercel"
-              target="_blank"
-              >Source Code</a
-            >
-          </li>
-        </ul>
-      </nav>
+{% extends "layout.html"%}
+{% block title %}
+Hand Sign Digit Recognition
+{% endblock %}
 
-      <h1 id="title">PASTA DETECTOR</h1>
+{% block content %}
+<div class="container py-5">
 
-      <p>
-        *placeholder text* Don't know what noodle this is? Upload your photo and we will see.
-      </p>
-      
-      <button class="Click-to-Upload-button"><p class="button-text">
-        Click to Upload!</p></button>
-    </main>
-  </body>
-</html>
+    <header class="text-white text-center">
+        <h1 class="display-4">Hand Sign Digit Language Detection</h1>
+        <p class="lead mb-5">A webapp to detect a digit using hand sign language. Just drop an image of Hand Digit Sign
+            and see the magic.</p>
+    </header>
+
+
+    <div class="row py-4">
+        <div class="col-lg-6 mx-auto">
+
+            <!-- Upload image input-->
+            <form action="{{ url_for('predict_image_file') }}" enctype="multipart/form-data" method="POST">
+                <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                    <input class="form-control border-0" id="upload" name="file" type="file">
+                    <label class="font-weight-light text-muted" for="upload" id="upload-label">Choose file</label>
+                    <div class="input-group-append">
+                        <label class="btn btn-light m-0 rounded-pill px-4" for="upload"> <i
+                                class="fa fa-cloud-upload mr-2 text-muted"></i><small
+                                class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                    </div>
+                </div>
+
+
+                <!-- Uploaded image area-->
+                <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box
+                    below.</p>
+                <div class="image-area mt-4"><img alt="" class="img-fluid rounded shadow-sm mx-auto d-block"
+                                                  id="imageResult" name="imageResult"
+                                                  src="#"></div>
+
+                <!-- Submit button-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <input class="btn btn-primary my-3" type="submit"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
