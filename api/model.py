@@ -21,4 +21,5 @@ def predict_result(predict):
     pred = model.predict(predict)
     class_index = np.argmax(pred[0], axis=-1)
     class_name = class_names[class_index]
-    return class_name
+    confidence_score = pred[0][class_index]
+    return class_name, confidence_score
