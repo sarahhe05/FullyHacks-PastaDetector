@@ -1,14 +1,14 @@
-@font-face {
-    font-family: 'TitleFont'; /* Name your font */
-    src: url('/static/beon/Beon-Regular.ttf'); /* URL to your font file */
-  }
-  
 /*reset page spacing*/
 * {
     margin: 0px;
     padding: 0px;
   }
-  
+
+  @font-face {
+    font-family: 'TitleFont'; /* Name your font */
+    src: url('/static/beon/Beon-Regular.ttf'); /* URL to your font file */
+  }
+
   body {
     background: url(/static/images/restaurant.jpg);
     background-size: cover;
@@ -16,7 +16,7 @@
   
   h1 {
     color: #FFF3E7;
-    font-size: 60pt;
+    font-size: 55pt;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -64,6 +64,17 @@
     padding-top: 10%;
   }
 
+  .outer-container{
+    background-color: rgba(233,170,76,0.5);
+    border: 10px solid #FFF3E7;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 10px; /* Optional: Add rounded corners to the container */
+    box-shadow: 0 0 20px 10px rgba(233,170,76,0.5); /* Apply glow effect */
+    padding-bottom: 30px;
+  }
+
   .hide-upload{
     opacity: 0;
   }
@@ -75,27 +86,14 @@
     transform: translateX(-50%);
     background-color:#E9AA4C;
     margin-top: 20px; 
-    margin-bottom: 50px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-  }
-
-  .Submit-button {
-    position: absolute;
-    left: 50%;
-    height: auto;
-    transform: translateX(-50%);
-    background-color:#E9AA4C;
-    margin-top: 50px; 
-    margin-bottom: 150px;
+    margin-bottom: 20px;
     padding: 10px;
     border-radius: 8px;
     border: none;
   }
 
   .button-text {
-    color: #1d1210;
+    color: #1D1210;
   }
 
   .Click-to-Upload-button:hover {
@@ -107,28 +105,22 @@
     color: #EC6E44;
   }
 
-  #result-section{
-    padding-top:50px;
-    padding-bottom:35px;
+  .Submit-button {
+    position: absolute;
+    left: 50%;
+    height: auto;
+    transform: translateX(-50%);
+    background-color:#E9AA4C;
+    margin-top: 20px; 
+    margin-bottom: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
   }
 
-  .uploaded-image{
-    width: 150px;
-    display: flex; /* Use flexbox to center the image */
-    justify-content: center; /* Horizontally center the image */
-    align-items: center; /* Vertically center the image */
-    left:40%;
-  }
-  
-  .outer-container{
-    background-color: rgba(233,170,76,0.5);
-    border: 10px solid #FFF3E7;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 65px;
-    border-radius: 10px; /* Optional: Add rounded corners to the container */
-    box-shadow: 0 0 20px 10px rgba(233,170,76,0.5); /* Apply glow effect */
-    padding-bottom: 50px;
+  .Submit-button:hover {
+    background-color:#FFF3E7;
+    box-shadow: 0 0 20px #EC6E44;
   }
 
   .image-area{
@@ -138,7 +130,8 @@
     align-items: center;
   }
 
-  .image-area uploaded-image {
-    max-width: 100%; /* Ensure the image does not exceed the container's width */
-    max-height: 100%; /* Ensure the image does not exceed the container's height */
-}
+  .uploaded-image{
+    width: 150px;
+    justify-content: center;
+    margin-top: 50px;
+  } 
