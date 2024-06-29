@@ -1,1 +1,4 @@
 Flask==2.2.3
+openai==0.28
+pandas==2.1.4
+werkzeug==2.1.2
